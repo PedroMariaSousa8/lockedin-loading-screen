@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f4f2ee" />
+    <meta name="color-scheme" content="light" />
+    <title>LockedIn</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="loading-screen" aria-label="LockedIn loading screen">
+      <section class="loading-cluster" aria-busy="true" aria-live="polite">
+        <h1 class="visually-hidden">LockedIn</h1>
+
+        <a
+          class="logo-link"
+          href="https://www.linkedin.com/in/pedromariasousa/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Open Pedro Maria Guedes de Sousa's LinkedIn profile"
+        >
+          <span class="logo-crop" aria-hidden="true">
+            <svg
+              class="logo-art"
+              viewBox="171 714 881 201"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <defs>
+                <mask
+                  id="lockedin-logo-mask"
+                  x="0"
+                  y="0"
+                  width="1200"
+                  height="1589"
+                  maskUnits="userSpaceOnUse"
+                  maskContentUnits="userSpaceOnUse"
+                  style="mask-type: luminance"
+                >
+                  <image
+                    href="assets/lockedin-logo-source.png"
+                    x="0"
+                    y="0"
+                    width="1200"
+                    height="1589"
+                    preserveAspectRatio="none"
+                  />
+                </mask>
+              </defs>
+              <rect
+                x="0"
+                y="0"
+                width="1200"
+                height="1589"
+                fill="currentColor"
+                mask="url(#lockedin-logo-mask)"
+              />
+            </svg>
+          </span>
+        </a>
+
+        <div class="progress" role="progressbar" aria-label="Loading LockedIn">
+          <span class="progress-segment"></span>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <button
+        class="privacy-trigger"
+        id="privacy-trigger"
+        type="button"
+        aria-haspopup="dialog"
+      >
+        Privacy policy
+      </button>
+      <span aria-hidden="true">|</span>
+      <span>© 2026 Website owned by Pedro Maria Guedes de Sousa</span>
+    </footer>
+
+    <dialog class="privacy-dialog" id="privacy-dialog" aria-labelledby="privacy-title">
+      <div class="privacy-dialog__header">
+        <h2 id="privacy-title">Privacy policy</h2>
+        <button class="privacy-close" type="button" id="privacy-close">Close</button>
+      </div>
+
+      <div class="privacy-dialog__content">
+        <p><strong>Last updated:</strong> 30 October 2026</p>
+
+        <p>
+          This website is owned by Pedro Maria Guedes de Sousa and is hosted using
+          GitHub Pages.
+        </p>
+
+        <h3>What data is collected</h3>
+        <p>
+          This website's own code provides no accounts, forms, comments, analytics,
+          advertising, or marketing features. It does not intentionally collect or
+          store personal data and it sets no cookies. GitHub Pages logs each visitor's
+          IP address and stores it for security purposes. GitHub processes that data
+          under its
+          <a
+            href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement"
+            target="_blank"
+            rel="noopener noreferrer"
+          >privacy statement</a>.
+        </p>
+
+        <h3>External links</h3>
+        <p>
+          Clicking the LockedIn logo opens LinkedIn. Any information processed after
+          leaving this website is governed by
+          <a
+            href="https://www.linkedin.com/legal/privacy-policy"
+            target="_blank"
+            rel="noopener noreferrer"
+          >LinkedIn's privacy policy</a>.
+        </p>
+
+        <h3>Your rights</h3>
+        <p>
+          Where applicable, data protection rights may include access, rectification,
+          erasure, restriction, objection, portability, and the right to complain to
+          a supervisory authority. See the
+          <a
+            href="https://commission.europa.eu/law/law-topic/data-protection/information-individuals_en"
+            target="_blank"
+            rel="noopener noreferrer"
+          >European Commission's guidance</a>
+          or contact Portugal's
+          <a
+            href="https://www.cnpd.pt/cnpd/atendimento-ao-publico/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >National Data Protection Commission</a>.
+        </p>
+
+        <h3>Contact and changes</h3>
+        <p>
+          Questions about this page can be sent through the owner's
+          <a
+            href="https://www.linkedin.com/in/pedromariasousa/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >LinkedIn profile</a>.
+          This notice will be updated if the website's features or data practices
+          change.
+        </p>
+      </div>
+    </dialog>
+
+    <script>
+      const privacyDialog = document.querySelector("#privacy-dialog");
+      const privacyTrigger = document.querySelector("#privacy-trigger");
+      const privacyClose = document.querySelector("#privacy-close");
+
+      privacyTrigger.addEventListener("click", () => privacyDialog.showModal());
+      privacyClose.addEventListener("click", () => privacyDialog.close());
+      privacyDialog.addEventListener("click", (event) => {
+        if (event.target === privacyDialog) privacyDialog.close();
+      });
+    </script>
+  </body>
+</html>
